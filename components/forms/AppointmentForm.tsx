@@ -29,7 +29,7 @@ const AppointmentForm = ({
   userId: string;
   patientId: string;
   appointment?: Appointment;
-  setOpen: (open: boolean) => void;
+  setOpen?: (open: boolean) => void;
 }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
@@ -39,10 +39,10 @@ const AppointmentForm = ({
   const form = useForm<z.infer<typeof AppointmentFormValidation>>({
     resolver: zodResolver(AppointmentFormValidation),
     defaultValues: {
-      primaryPhysician: appointment?.primaryPhysician || '',
-      schedule: new Date(appointment?.schedule!) || new Date(),
-      reason: appointment?.reason || '',
-      note: appointment?.note || '',
+      primaryPhysician: appointment ? appointment?.primaryPhysician : '',
+      schedule: appointment ? new Date(appointment?.schedule) : new Date(),
+      reason: appointment ? appointment?.reason : '',
+      note: appointment ? appointment?.note : '',
       cancellationReason: appointment?.cancellationReason || '',
     },
   });
