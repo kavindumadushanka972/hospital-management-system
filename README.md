@@ -25,7 +25,7 @@ NEXT_PUBLIC_ENDPOINT=https://cloud.appwrite.io/v1
 NEXT_PUBLIC_ADMIN_PASSKEY=111111
 ```
 
-Replace the placeholder values with your actual Appwrite credentials. You can obtain these credentials by signing up on the [https://cloud.appwrite.io](Appwrite) website.
+Replace the placeholder values with your actual Appwrite credentials. You can obtain these credentials by signing up on the [Appwrite](https://cloud.appwrite.io) website.
 
 #### Running the Project
 
